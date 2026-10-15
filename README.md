@@ -27,3 +27,5 @@ The session file is for one local writer at a time; the revision check detects s
 Firedrill integration will be added only against its verified new release. This repository is private and has no selected public license.
 
 Implementation reference: [AI SDK v7 structured data](https://ai-sdk.dev/docs/ai-sdk-core/generating-structured-data).
+
+Explore related applications in the [Firedrill example catalog](https://github.com/firedrill-tools/firedrill-example-catalog). Product and setup references: [Firedrill](https://firedrill.run/) and the [official developer documentation](https://docs.firedrill.run/). Use documentation matching the qualified release; this repository records its current integration limits above.
