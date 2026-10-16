@@ -1,11 +1,20 @@
-# Onboarding conversation scenarios
+# Onboarding scenarios
 
-Use a separate `--state` file for each scenario. The file persists the session ID, confirmed requirements, the supporting user phrase for each field, open questions and conversation history.
+All people, companies and conversation messages are synthetic. Prior messages in fixtures are human-authored examples, not recorded model executions. Select an exclusive new private copy for each independent journey; continue that copy with explicit user messages. Case focus describes review criteria, not seeded model outputs or a semantic score.
 
-1. **Ordinary intake:** “We are Harbor Labs in the US with 12 teammates. We need to onboard support.” The adviser should retain these details and ask for a timeline.
-2. **Correction:** After the first turn, say “Correction: the region is Canada, not US. We want to launch in November.” The saved region should be Canada while the organization and goal remain intact.
-3. **Retraction:** Say “Remove November; the launch date is undecided.” The timeline should become null and `readyForPlan` should stay false.
-4. **Missing answers:** Give only a vague goal. The adviser should ask for information rather than manufacture a region, team size or date.
-5. **Provider failure:** With a missing or invalid key, the command should fail without appending a user or assistant message to the session.
+| Case | Focus |
+|---|---|
+| starter | Ordinary five-field intake; completeness never authorizes external actions. |
+| busy | Eighteen turns; team/timeline corrections retain organization, region and goal outside the recent context window. |
+| correction | Latest Canada correction replaces US while preserving other facts. |
+| retraction | Clear November, retain retraction evidence, stop readiness until a new timeline is supplied. |
+| missing-details | Headcount/region remain unknown; ask rather than fabricate. |
+| assistant-suggestion | Proposed Canada in assistant text is not a confirmed region. |
+| conflicting-utterance | An unsettled 12-or-20 statement requires clarification; exact phrase checks alone cannot choose intent. |
+| number-boundary | Evidence 12 cannot match part of 120. |
+| quoted-instruction | Copied email instruction is not an onboarding change; inspect live behavior. |
+| turn-limit | Forty prior turns; refuse another turn before a model call. |
 
-The offline suite uses scripted turn outputs to verify state transitions and failure behavior. It does not prove model conversation quality. A provider key and measured live turns are required for that evidence.
+Boundary checks cover both actual native adapters' partial/missing completion, refusals, unexpected tools, SDK schema/JSON errors, missing/zero/partial/malformed usage, bounded readers, one 503 attempt and cancellation recovery. Loopback CLI proves successive real application turns and SIGINT/SIGTERM. Owner-lock tests use separate Node processes; exact-byte edits and replaced ownership refuse stale publication. Recording faults preserve whether a session was already committed. These checks prove protocol/state boundaries, not a model's semantic success.
+
+Manifest hashes, declared identity, user message and prior-turn count are validated before initialization. Focus/identity metadata does not enter the model prompt. Source bytes, raw generated turn, usage and committed state remain distinct evidence. Never automatically retry a turn after uncertain or committed publication; inspect show/receipt first.

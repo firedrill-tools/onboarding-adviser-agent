@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "dataset": {
+    "id": "synthetic-onboarding-cases",
+    "version": 1,
+    "profile": "boundary",
+    "case_id": "retraction"
+  },
+  "importedHistory": {
+    "origin": "synthetic_human_authored",
+    "turns": 5
+  },
+  "sessionId": "10000000-0000-4000-8000-000000000004",
+  "revision": 5,
+  "requirements": {
+    "organization": "Harbor Labs",
+    "region": "Canada",
+    "teamSize": "12",
+    "primaryGoal": "support onboarding",
+    "timeline": "November"
+  },
+  "provenance": {
+    "organization": {
+      "turn": 1,
+      "evidence": "Harbor Labs"
+    },
+    "region": {
+      "turn": 2,
+      "evidence": "Canada"
+    },
+    "teamSize": {
+      "turn": 3,
+      "evidence": "12"
+    },
+    "primaryGoal": {
+      "turn": 4,
+      "evidence": "support onboarding"
+    },
+    "timeline": {
+      "turn": 5,
+      "evidence": "November"
+    }
+  },
+  "openQuestions": [],
+  "messages": [
+    {
+      "role": "user",
+      "content": "We are Harbor Labs."
+    },
+    {
+      "role": "assistant",
+      "content": "I recorded Harbor Labs."
+    },
+    {
+      "role": "user",
+      "content": "Our region is Canada."
+    },
+    {
+      "role": "assistant",
+      "content": "I recorded Canada."
+    },
+    {
+      "role": "user",
+      "content": "There are 12 teammates."
+    },
+    {
+      "role": "assistant",
+      "content": "I recorded 12 teammates."
+    },
+    {
+      "role": "user",
+      "content": "Our primary goal is support onboarding."
+    },
+    {
+      "role": "assistant",
+      "content": "I recorded support onboarding."
+    },
+    {
+      "role": "user",
+      "content": "We plan to launch in November."
+    },
+    {
+      "role": "assistant",
+      "content": "I recorded November."
+    }
+  ]
+}

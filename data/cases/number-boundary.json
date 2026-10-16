@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dataset": {
+    "id": "synthetic-onboarding-cases",
+    "version": 1,
+    "profile": "boundary",
+    "case_id": "number-boundary"
+  },
+  "importedHistory": {
+    "origin": "synthetic_human_authored",
+    "turns": 0
+  },
+  "sessionId": "10000000-0000-4000-8000-000000000008",
+  "revision": 0,
+  "requirements": {
+    "organization": null,
+    "region": null,
+    "teamSize": null,
+    "primaryGoal": null,
+    "timeline": null
+  },
+  "provenance": {},
+  "openQuestions": [],
+  "messages": []
+}

@@ -89,8 +89,9 @@ test('retraction removes a value and keeps its evidence', async () => {
 test('stale revision cannot overwrite a newer session', async () => {
   const store = await freshStore();
   const session = await store.load();
-  await store.save(0, { ...session, revision: 1 });
-  await assert.rejects(store.save(0, { ...session, revision: 1 }), /stale/);
+  const next = { ...session, revision: 1, messages: [{role:'user',content:'Hello'},{role:'assistant',content:'What is your organization?'}] };
+  await store.save(0, next);
+  await assert.rejects(store.save(0, next), /stale/);
 });
 
 test('unknown provider and missing model are explicit', () => {

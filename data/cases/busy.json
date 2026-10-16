@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "dataset": {
+    "id": "synthetic-onboarding-cases",
+    "version": 1,
+    "profile": "busy",
+    "case_id": "busy"
+  },
+  "importedHistory": {
+    "origin": "synthetic_human_authored",
+    "turns": 18
+  },
+  "sessionId": "10000000-0000-4000-8000-000000000002",
+  "revision": 18,
+  "requirements": {
+    "organization": "Harbor Labs",
+    "region": "Canada",
+    "teamSize": "12",
+    "primaryGoal": "support onboarding",
+    "timeline": "November"
+  },
+  "provenance": {
+    "organization": {
+      "turn": 1,
+      "evidence": "Harbor Labs"
+    },
+    "region": {
+      "turn": 2,
+      "evidence": "Canada"
+    },
+    "teamSize": {
+      "turn": 3,
+      "evidence": "12"
+    },
+    "primaryGoal": {
+      "turn": 4,
+      "evidence": "support onboarding"
+    },
+    "timeline": {
+      "turn": 5,
+      "evidence": "November"
+    }
+  },
+  "openQuestions": [],
+  "messages": [
+    {
+      "role": "user",
+      "content": "We are Harbor Labs."
+    },
+    {
+      "role": "assistant",
+      "content": "I recorded Harbor Labs."
+    },
+    {
+      "role": "user",
+      "content": "Our region is Canada."
+    },
+    {
+      "role": "assistant",
+      "content": "I recorded Canada."
+    },
+    {
+      "role": "user",
+      "content": "There are 12 teammates."
+    },
+    {
+      "role": "assistant",
+      "content": "I recorded 12 teammates."
+    },
+    {
+      "role": "user",
+      "content": "Our primary goal is support onboarding."
+    },
+    {
+      "role": "assistant",
+      "content": "I recorded support onboarding."
+    },
+    {
+      "role": "user",
+      "content": "We plan to launch in November."
+    },
+    {
+      "role": "assistant",
+      "content": "I recorded November."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 1 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 1: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 2 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 2: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 3 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 3: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 4 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 4: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 5 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 5: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 6 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 6: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 7 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 7: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 8 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 8: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 9 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 9: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 10 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 10: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 11 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 11: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 12 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 12: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    },
+    {
+      "role": "user",
+      "content": "Please explain rollout consideration 13 while keeping our confirmed requirements."
+    },
+    {
+      "role": "assistant",
+      "content": "Consideration 13: review training, feedback and rollout sequencing. These are suggestions, not confirmed requirements."
+    }
+  ]
+}

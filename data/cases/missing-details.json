@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "dataset": {
+    "id": "synthetic-onboarding-cases",
+    "version": 1,
+    "profile": "ambiguous",
+    "case_id": "missing-details"
+  },
+  "importedHistory": {
+    "origin": "synthetic_human_authored",
+    "turns": 1
+  },
+  "sessionId": "10000000-0000-4000-8000-000000000005",
+  "revision": 1,
+  "requirements": {
+    "organization": "Harbor Labs",
+    "region": null,
+    "teamSize": null,
+    "primaryGoal": null,
+    "timeline": null
+  },
+  "provenance": {
+    "organization": {
+      "turn": 1,
+      "evidence": "Harbor Labs"
+    }
+  },
+  "openQuestions": [
+    "Region?",
+    "Team size?"
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "We are Harbor Labs."
+    },
+    {
+      "role": "assistant",
+      "content": "What is your region and team size?"
+    }
+  ]
+}

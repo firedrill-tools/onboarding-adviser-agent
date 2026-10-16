@@ -1,18 +1,36 @@
 {
   "name": "onboarding-adviser-agent",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "advise": "node src/cli.js",
-    "test": "node --test",
-    "check": "npm test"
+    "test": "node --test test/*.test.js",
+    "check": "npm test",
+    "data:check": "node scripts/generate-data.js --check",
+    "check:distribution": "node scripts/check-distribution.js",
+    "package": "node scripts/package.js"
   },
   "dependencies": {
     "ai": "7.0.141",
     "@ai-sdk/openai": "4.0.94",
     "@ai-sdk/anthropic": "4.0.80",
     "zod": "4.6.7"
-  }
+  },
+  "bin": {
+    "onboarding-adviser": "src/cli.js"
+  },
+  "files": [
+    "src",
+    "data",
+    "README.md",
+    "AGENTS.md",
+    "PLAN.md",
+    "COMPATIBILITY.md",
+    "scenarios",
+    ".env.example"
+  ]
 }
