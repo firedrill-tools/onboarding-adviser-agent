@@ -14,6 +14,8 @@
 - Duplicate field updates silently selected the last value. Substring evidence could match US in BUSINESS or 12 in 120. Strict uniqueness and exact whole-word/number phrase checks now reject these cases, without pretending to prove intent.
 - The original engine declaration allowed Node 20 while pinned provider packages require Node 22; metadata now matches the exercised runtime contract.
 
+- Linux Node 22 CI exposed AbortSignal.timeout's unreferenced timer ending a pending synthetic fetch before timeout. The application now owns a referenced deadline timer and clears it in finally; the existing native deadline regression verifies cleanup/recovery.
+
 ## Parked gates
 
 Live OpenAI/Anthropic interpretation of corrections, ambiguity, paraphrases and quoted instructions needs owner-supplied model/key/budget and human review. Test fixtures do not establish model quality, retention or billing.
