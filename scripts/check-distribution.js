@@ -9,9 +9,14 @@ const env={...process.env};for(const key of ['OPENAI_API_KEY','ANTHROPIC_API_KEY
 for(const key of Object.keys(env))if(key.toLowerCase()==='npm_config_allow_scripts')delete env[key];
 const run=(command,args,cwd)=>execFileSync(command,args,{cwd,env,encoding:'utf8',timeout:120000,maxBuffer:4*1024*1024,stdio:['ignore','pipe','pipe']});
 try{
-  const archive=join(temporary,'source.tar.gz');run(process.execPath,['scripts/package.js',archive],root);run('tar',['-xzf',archive,'-C',temporary],temporary);
+  const archive=join(temporary,'source.tar.gz');run(process.execPath,['scripts/package.js',archive],root);
+  const entries=run('tar',['-tzf',archive],temporary).split('\n');
+  if(!entries.includes('package/firedrill/package-lock.json')||entries.some(name=>name.includes('/node_modules/')||name.includes('/.runs/')))throw new Error('optional execution toolchain source is missing or contains installed/private state');
+  run('tar',['-xzf',archive,'-C',temporary],temporary);
   const source=join(temporary,'package');if(!fs.existsSync(join(source,'package-lock.json')))throw new Error('archive lacks lock');
   run('npm',['ci','--ignore-scripts','--no-audit','--no-fund'],source);
+  run('npm',['ci','--prefix','firedrill','--ignore-scripts','--no-audit','--no-fund'],source);
+  run('npm',['test','--prefix','firedrill'],source);
   run(process.execPath,['scripts/generate-data.js','--check'],source);
   const outside=join(temporary,'outside');fs.mkdirSync(outside);const cli=join(source,'src/cli.js');
   run(process.execPath,[cli,'--help'],outside);const manifest=JSON.parse(run(process.execPath,[cli,'list'],outside));if(manifest.cases.length!==10)throw new Error('case list differs');

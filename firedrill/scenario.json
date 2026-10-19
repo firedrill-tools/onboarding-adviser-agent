@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "2026-10-14",
+  "name": "Onboarding conversation \u2014 actual application",
+  "target": {
+    "kind": "command",
+    "argv": [
+      "node",
+      "firedrill/target.mjs"
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "starter",
+      "name": "Initial requirements",
+      "input": {
+        "caseId": "starter",
+        "provider": "openai"
+      }
+    },
+    {
+      "id": "correction",
+      "name": "User correction",
+      "input": {
+        "caseId": "correction",
+        "provider": "openai"
+      }
+    }
+  ],
+  "repetitions": 1,
+  "concurrency": 1,
+  "limits": {
+    "timeoutMs": 180000,
+    "maxRuns": 2,
+    "maxOutputBytes": 4194304
+  }
+}

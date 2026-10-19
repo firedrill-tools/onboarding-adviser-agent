@@ -7,3 +7,7 @@ Preserve correction, retraction, untouched fields and user provenance. Duplicate
 Use SessionStore's owner lock for all writes, hold ownership across the turn, validate history/schema and compare exact source bytes before atomic private publication. Do not take over by lock age or erase a replacement owner. A hard-killed owner requires inspection. Recording/publication failures must retain state commit truth; no blind retry after an uncertain or committed save. Inputs/runs are private and independent sessions must remain isolated.
 
 Use synthetic data only. Regenerate and check all ten cases, preserve manifest focus outside model context, and initialize exclusive copies. Run locked tests and fresh archive verification after relevant changes. Use the new qualified Firedrill release only; live model quality, licensing/publication and released integration remain external gates in PLAN.md.
+
+## Current Firedrill connection — 2026-10-19
+
+Read `firedrill/README.md` for the optional pinned 2.2.2 execution toolchain and real conversation CLI adapter. Every invocation must preserve its own private session/evidence and select an explicit provider/enabled model. Run integration tests plus the existing distribution gate. Current release availability supersedes older pending-release notes; no authenticated persisted or paid model proof is implied.

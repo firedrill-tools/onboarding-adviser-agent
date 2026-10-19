@@ -63,3 +63,7 @@ Live model judgment needs owner-supplied credentials/model/budget. New Firedrill
 Implementation references: [AI SDK v7 structured data](https://ai-sdk.dev/docs/ai-sdk-core/generating-structured-data), [settings/retry controls](https://ai-sdk.dev/docs/ai-sdk-core/settings), [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs).
 
 Explore the [Firedrill example catalog](https://github.com/firedrill-tools/firedrill-example-catalog), [Firedrill](https://firedrill.run/) and [official developer documentation](https://docs.firedrill.run/). Use documentation matching the qualified release.
+
+## Current Firedrill connection — 2026-10-19
+
+The [agent-first integration](firedrill/README.md) pins released CLI/SDK 2.2.2 and invokes the actual conversation CLI with a fresh private case/session per run. Earlier release-unavailability notes are historical. Offline qualification and authenticated/live evidence remain distinct.
