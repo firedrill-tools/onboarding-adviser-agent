@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { Readable } from 'node:stream';
 import { spawnSync } from 'node:child_process';
+import { join } from 'node:path';
 import { readFile, stat } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { TARGET_INVOCATION_VERSION, simulationExitCode } from '@firedrill-run/sdk';
@@ -105,6 +106,11 @@ test('separate attempts preserve distinct private sessions after actual pre-mode
   };
   const first = attempt();
   const original = await readFile(first);
+  const mapping = join(first, '..', 'invocation.json');
+  const saved = JSON.parse(await readFile(mapping));
+  assert.deepEqual(saved, { source: 'command_adapter', identity: { runId: 'offline-run', attemptId: 'offline-attempt', scenarioId: 'starter' } });
+  assert.equal((await stat(mapping)).mode & 0o777, 0o600);
+
   const second = attempt();
   assert.notEqual(first, second);
   assert.deepEqual(await readFile(first), original);
