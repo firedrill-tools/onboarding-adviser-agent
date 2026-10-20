@@ -78,7 +78,7 @@ Live model judgment needs owner-supplied credentials/model/budget. Authenticated
 
 Implementation references: [AI SDK v7 structured data](https://ai-sdk.dev/docs/ai-sdk-core/generating-structured-data), [settings/retry controls](https://ai-sdk.dev/docs/ai-sdk-core/settings), [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs).
 
-Explore the [Firedrill example catalog](https://github.com/firedrill-tools/firedrill-example-catalog), [Firedrill](https://firedrill.run/) and [official developer documentation](https://docs.firedrill.run/). Use documentation matching the qualified release.
+Explore the [Firedrill examples](https://docs.firedrill.run/guides/examples), [Firedrill](https://firedrill.run/) and [official developer documentation](https://docs.firedrill.run/). Use documentation matching the qualified release.
 
 ## Current Firedrill connection — 2026-10-19
 
