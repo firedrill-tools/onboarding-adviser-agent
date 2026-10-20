@@ -2,6 +2,8 @@
 
 A standalone conversation CLI using Vercel AI SDK v7, with configurable OpenAI or Anthropic models. It gathers organization, region, team size, primary goal and timeline, preserves corrections/retractions and stores requirements with evidence from the latest user message. It calls no external onboarding service.
 
+This example repository is publicly viewable. A project license has not been selected.
+
 ## Simulate with Firedrill
 
 [Firedrill](https://firedrill.run/) is a simulation platform for AI agents.
@@ -72,7 +74,7 @@ npm run check:distribution
 
 60 offline checks exercise the actual AI SDK/provider adapters, both providers over loopback CLI HTTP, SIGINT/SIGTERM, raw completion/usage, persistence faults, cross-process exclusion, changed state, provenance and all datasets. Fresh locked source-archive installation runs outside the checkout with CLI/data/key preflight and a real busy-session correction. Controlled responses and injected turns prove application boundaries, not live model quality.
 
-Live model judgment needs owner-supplied credentials/model/budget. Authenticated persisted Firedrill runs, publication and licensing remain parked; the repo remains private. [PLAN.md](PLAN.md) records the remaining gates.
+Live model judgment needs owner-supplied credentials/model/budget. Authenticated persisted Firedrill runs and licensing remain parked. The repository is publicly viewable; no project license has been selected. [PLAN.md](PLAN.md) records the remaining gates.
 
 Implementation references: [AI SDK v7 structured data](https://ai-sdk.dev/docs/ai-sdk-core/generating-structured-data), [settings/retry controls](https://ai-sdk.dev/docs/ai-sdk-core/settings), [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs).
 
