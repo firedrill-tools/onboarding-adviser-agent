@@ -1,4 +1,18 @@
-# Firedrill agent-first integration
+# Simulate this agent with Firedrill
+
+Firedrill is a simulation platform for AI agents. Your coding agent can prepare
+and operate these simulations; the application and its model run in your own
+repository or CI.
+
+Start in the repository root, not inside `firedrill/`:
+
+```sh
+npx firedrill-run init
+```
+
+Authorize Firedrill and select a project/environment. Installation choices are
+optional; skip them when using the locked `firedrill/` toolchain below. This setup
+does not invoke the target agent or grant it access to real business accounts.
 
 The separate optional npm toolchain exact-pins released CLI and TypeScript SDK **2.2.2** (verified October 19, 2026). Node 22+ is required. Application/provider versions remain in the root lockfile.
 
@@ -9,12 +23,11 @@ From the repository root:
 ```sh
 npm ci
 npm ci --prefix firedrill --ignore-scripts --no-audit --no-fund
-npm test --prefix firedrill
 firedrill_cli=firedrill/node_modules/@firedrill-run/cli/bin/firedrill.mjs
 node "$firedrill_cli" validate firedrill/scenario.json --json --non-interactive
 ```
 
-Offline validation allocates no batch. Initialize scope with `node "$firedrill_cli" init` in a human terminal. Automation uses `FIREDRILL_TOKEN`, `FIREDRILL_PROJECT_ID` and `FIREDRILL_ENVIRONMENT_ID` from its secret store. Keep the application's OpenAI/Anthropic key and enabled `ONBOARDING_MODEL` separate. Alternatively select the enabled model through `configuration.parameters.model` in a reviewed recipe. Do not put credentials in recipes or source.
+Offline validation allocates no batch. Initialize scope with `npx firedrill-run init` in a human terminal. Automation uses `FIREDRILL_TOKEN`, `FIREDRILL_PROJECT_ID` and `FIREDRILL_ENVIRONMENT_ID` from its secret store. Keep the application's OpenAI/Anthropic key and enabled `ONBOARDING_MODEL` separate. Alternatively select the enabled model through `configuration.parameters.model` in a reviewed recipe. Do not put credentials in recipes or source.
 
 ## Run the actual conversation
 
@@ -44,3 +57,11 @@ Ordinary CI and the fresh source distribution gate run offline integration check
 References: [SDK](https://docs.firedrill.run/sdk/typescript), [command targets](https://docs.firedrill.run/guides/callbacks), [CLI](https://docs.firedrill.run/cli/overview), [operator MCP](https://docs.firedrill.run/guides/control-mcp).
 
 Before application dispatch, each private workspace saves the validated outer run/attempt/scenario IDs in `invocation.json`. This maps interrupted runs to local state; it is separate from the SDK recovery journal and grants no application authority.
+
+## Offline verification
+
+After installing the application dependencies and locked integration toolchain,
+run `npm test --prefix firedrill` to exercise the adapter checks. These checks are
+optional for first use and call no paid model. The Node 22+ requirement above is
+for the Firedrill clients; it does not lower any application runtime requirement
+in the root README.
